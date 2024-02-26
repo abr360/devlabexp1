@@ -16,7 +16,7 @@ stages:
   - job: MavenPackage
     displayName: Maven Package
     pool:
-      name: myclgpool
+      name: devlab2
     steps:
     - task: Maven@3
       displayName: 'Maven Package'
@@ -29,7 +29,7 @@ stages:
   - job: PublishArtifact
     displayName: 'Publish Artifact'
     pool:
-      name: myclgpool
+      name: devlab2
     steps:
     - task: CopyFiles@2
       displayName: 'Copy Files to artifact staging directory'
